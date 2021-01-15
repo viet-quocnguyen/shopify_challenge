@@ -147,13 +147,14 @@ function App() {
 				</Grid>
 
 				{/* Search results with nominate option */}
-				<Grid className="search-result-wrapper" item xs={6}>
+				<Grid className="search-result-wrapper" item md={6} xs={12}>
 					<div className="search-result">
 						<h3>Results for "{prevSearch}"</h3>
 						<List>
 							{searchResults.map((movie, index) => (
-								<ListItem key={index}>
+								<ListItem key={index} className="card-item">
 									<ListItemText
+										className="card-text"
 										primary={
 											<Typography>
 												{movie.Title}
@@ -166,21 +167,17 @@ function App() {
 										}
 									/>
 
-									<ListItemSecondaryAction>
-										<Button
-											variant="contained"
-											size="small"
-											color="primary"
-											disabled={isExistInNominations(
-												movie
-											)}
-											onClick={() =>
-												handleAddNomination(movie)
-											}
-										>
-											Nominate
-										</Button>
-									</ListItemSecondaryAction>
+									<Button
+										variant="contained"
+										size="small"
+										color="primary"
+										disabled={isExistInNominations(movie)}
+										onClick={() =>
+											handleAddNomination(movie)
+										}
+									>
+										Nominate
+									</Button>
 								</ListItem>
 							))}
 						</List>
@@ -188,13 +185,14 @@ function App() {
 				</Grid>
 
 				{/* Nominations list with remove option for each item */}
-				<Grid className="nominations-wrapper" item xs={6}>
+				<Grid className="nominations-wrapper" item md={6} xs={12}>
 					<div className="nominations">
 						<h3>Nominations</h3>
 						<List>
 							{nominations.map((movie, index) => (
-								<ListItem key={index}>
+								<ListItem key={index} className="card-item">
 									<ListItemText
+										className="card-text"
 										primary={
 											<Typography>
 												{movie.Title}
@@ -206,18 +204,17 @@ function App() {
 											</Typography>
 										}
 									/>
-									<ListItemSecondaryAction>
-										<Button
-											variant="contained"
-											size="small"
-											color="secondary"
-											onClick={() =>
-												handleRemoveNomination(movie)
-											}
-										>
-											Remove
-										</Button>
-									</ListItemSecondaryAction>
+
+									<Button
+										variant="contained"
+										size="small"
+										color="secondary"
+										onClick={() =>
+											handleRemoveNomination(movie)
+										}
+									>
+										Remove
+									</Button>
 								</ListItem>
 							))}
 						</List>

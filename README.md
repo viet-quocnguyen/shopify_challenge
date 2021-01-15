@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# The Shoppies - Shopify Front-end challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## About The Project
 
-## Available Scripts
+Shopify has branched out into movie award shows. This app is built to help manage movie nominations for the upcoming Shoppies.
 
-In the project directory, you can run:
+You could see the live demo of this project [here](https://reverent-banach-beb88d.netlify.app/).
 
-### `yarn start`
+![alt](./docs/demo-pic.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### The Challenge:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+We need a webpage that can search OMDB for movies, and allow the user to save their favourite films they feel should be up for nomination. When they've selected 5 nominees they should be notified they're finished.
 
-### `yarn test`
+We'd like a simple to use interface that makes it easy to:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   Search OMDB and display the results (movies only)
+-   Add a movie from the search results to our nomination list
+-   View the list of films already nominated
+-   Remove a nominee from the nomination list
 
-### `yarn build`
+### Technical requirements
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Search results should come from OMDB's API (free API key: http://www.omdbapi.com/apikey.aspx).
+2. Each search result should list at least its title, year of release and a button to nominate that film.
+3. Updates to the search terms should update the result list
+4. Movies in search results can be added and removed from the nomination list.
+5. If a search result has already been nominated, disable its nominate button.
+6. Display a banner when the user has 5 nominations.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Built With
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   React.js, Material UI
 
-### `yarn eject`
+<!-- GETTING STARTED -->
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Run project on local machine
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Prerequisites
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+-   Node.js: v12.16.1
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+-   npm
 
-## Learn More
+```sh
+npm install npm@latest -g
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Installation
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Clone the repo
 
-### Code Splitting
+```sh
+git clone https://github.com/viet-quocnguyen/shopify_challenge.git
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Install NPM packages
 
-### Analyzing the Bundle Size
+```sh
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Start project locally
 
-### Making a Progressive Web App
+```sh
+npm run start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<!-- LICENSE -->
 
-### Advanced Configuration
+## License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Distributed under the MIT License. See `LICENSE` for more information.

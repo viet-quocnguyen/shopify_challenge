@@ -1,10 +1,23 @@
 .input-form {
-	/* background-color: red; */
 	width: 100%;
 }
 
 .input-textfield {
 	width: 100%;
+}
+
+.card-item {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+.card-text {
+	width: 80%;
+}
+
+.card-button {
+	width: 20%;
 }
 
 .search-result {
