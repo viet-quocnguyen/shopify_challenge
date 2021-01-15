@@ -4,7 +4,7 @@
 
 Shopify has branched out into movie award shows. This app is built to help manage movie nominations for the upcoming Shoppies.
 
-You could see the live demo of this project [here](https://reverent-banach-beb88d.netlify.app/).
+You could see the live demo of this project [here](https://shoppiess.netlify.app/).
 
 ![alt](./docs/demo-pic.png)
 
